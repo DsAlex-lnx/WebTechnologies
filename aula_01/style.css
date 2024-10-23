@@ -1,0 +1,35 @@
+* {
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(black, purple);
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+}
+
+p {
+   color: white; 
+}
+
+#apresentacao {
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.topicos {
+    color: crimson;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
