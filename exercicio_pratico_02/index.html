@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Preenchendo as informações padroes da pagina, tais como: tipos de caracteres, titulo da pagina e a folha de estilos -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Separando o cabeçalho da página -->
+    <header>
+        <!-- Comportando a imagem e o texto dentro de uma div para estilizar posteriormente -->
+        <div class="header-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Wikimedia-logo.png" alt="Logo do site" class="logo">
+            <h1>Bem-vindo ao Nosso Site</h1>
+        </div>
+
+        <!-- Menu com listas -->
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Utilizando tags semânticas para melhorar a legibilidade -->
+        <section>
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo para nos enviar uma mensagem.</p>
+            <!-- Criando um formulario básico -->
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Adicionando um rodapé na página -->
+    <footer>
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+        <p>Siga-nos nas redes sociais!</p>
+    </footer>
+</body>
+</html>
