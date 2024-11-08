@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ddd;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: transform 0.3s ease;
+}
+
+.nome {
+    color: #333;
+    margin: 10px 0;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.descricao {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #ccc;
+}
+
+.card:hover .imagem {
+    transform: scale(1.2);
+}
+
+.nome:focus {
+    color: red;
+}
+
+.card:active .descricao {
+    color: red;
+}
