@@ -2,52 +2,138 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #ddd;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    padding: 20px;
 }
 
 .card {
-    width: 300px;
-    padding: 20px;
+    width: 350px;
+    padding: 30px;
     text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #fff;
-    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagem {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 2px solid black;
-    transition: transform 0.3s ease;
+    border: 3px solid #3498db;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    object-fit: cover;
 }
 
 .nome {
-    color: #333;
-    margin: 10px 0;
+    color: #2c3e50;
+    margin: 15px 0 5px;
     outline: none;
     transition: color 0.3s ease;
 }
 
-.descricao {
-    color: #333;
-    transition: color 0.3s ease;
+.cargo {
+    color: #3498db;
+    margin: 0 0 20px;
+    font-size: 0.9em;
 }
 
+.info-container {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.info {
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Primeiro e último elementos do info-container */
+.info:first-child {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.info:last-child {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.skill {
+    background-color: #edf2f7;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+}
+
+/* Primeiro e último elementos das skills */
+.skill:first-child {
+    background-color: #3498db;
+    color: white;
+}
+
+.skill:last-child {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.descricao {
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+/* Interações */
 .card:hover {
-    background-color: #ccc;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .card:hover .imagem {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    border-color: #2ecc71;
 }
 
 .nome:focus {
-    color: red;
+    color: #3498db;
 }
 
-.card:active .descricao {
-    color: red;
+.skill:hover {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mantendo as cores originais nos hovers dos primeiro e último skills */
+.skill:first-child:hover {
+    background-color: #2980b9;
+}
+
+.skill:last-child:hover {
+    background-color: #27ae60;
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
 }
