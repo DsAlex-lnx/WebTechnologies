@@ -1,9 +1,16 @@
+/* Estilos específicos do header */
+
+
+/* rem é uma unidade de medida relativa ao tamanho da fonte do elemento raiz (root) do documento */
+/* portanto, 1rem = 16px */
+/* usamos rem ao inves de px para que o site seja mais responsivo */
 header {
     background-color: var(--cor-branca);
-    padding: 1rem 2rem; /* 1rem = 16px */
+    padding: 1rem 2rem;
     box-shadow: var(--box-shadow);
 }
 
+/*space between preenche o espaço entre os elementos */
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,18 +19,31 @@ header {
     align-items: center;
 }
 
+/*gap é o espaço entre os elementos */
+/* diferente do margin, que é o espaço fora dos elementos ou do padding, que é o espaço dentro dos elementos */
+/* usamos gap ao inves de margin para que o site seja mais responsivo */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+/* drop-shadow é uma propriedade que cria uma sombra ao redor do elemento */
+/* o primeiro valor é a distancia horizontal da sombra */
+/* o segundo valor é a distancia vertical da sombra */
+/* o terceiro valor é o desfoque da sombra */
+/* o quarto valor é a cor da sombra */
 .logo {
     width: 50px;
     height: 50px;
 }
 
-.nome-empresa {
+/* webkit é um prefixo para o navegador webkit (chrome, safari) */
+/* desse modo, o background-clip: text funciona em navegadores webkit */
+/* o -webkit-background-clip: text é uma propriedade que corta a imagem de fundo no texto, vai servir para o efeito neon */
+/* navegadores nao webkit nao reconhecem o background-clip: text, um exemplo de isso é o firefox */
+/*background-clip: text é uma propriedade que corta a imagem de fundo no texto */
+.company-name {
     background: linear-gradient(45deg, var(--cor-gradiente-1), var(--cor-gradiente-2));
     -webkit-background-clip: text;
     background-clip: text;
@@ -33,64 +53,73 @@ header {
     letter-spacing: 0.5px;
 }
 
+
 nav ul {
     list-style-type: none;
     display: flex;
     gap: 2rem;
 }
 
+/*transition é uma propriedade que define a transição de um elemento */
+/* ease é um tipo de transição que é suave começa lento, vai mais rapido e termina lento */
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_speed */
+/* tipos de hover em menus: https://menuhover.com/ */
 nav a {
     text-decoration: none;
     color: var(--cor-texto);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-    position: relative;
     transition: all 0.3s ease;
+    position: relative;
 }
 
+/* ::after é um seletor que cria um pseudo-elemento após o elemento */
+/* resumindo, criamos um elemento que vai ficar embaixo do texto */
+/* esse psudo-elemento é do tipo block, entao ele vai ocupar a largura total do texto */
+/* content: '' é o conteudo do pseudo-elemento, queremos um elemento vazio */
 nav a::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2;
-    background: linear-gradient(45, var(--cor-gradiente-1), var(--cor-gradiente-2));
+    height: 2px;
+    background: linear-gradient(45deg, var(--cor-gradiente-1), var(--cor-gradiente-2));
     transition: width 0.3s ease;
 }
 
+/* quando o mouse passar por cima do texto, o pseudo-elemento vai ocupar a largura total do texto */
 nav a:hover::after {
     width: 100%;
 }
 
+/* quando o mouse passar por cima do texto, o texto vai ter o efeito neon */
 nav a:hover {
     background: linear-gradient(45deg, var(--cor-gradiente-1), var(--cor-gradiente-2));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;   
+    color: transparent;
 }
 
+/* o ultimo elemento da lista */
 nav ul li:last-child a {
     background: var(--cor-neon);
     color: var(--cor-branca);
-    padding: 0.8rem 1.5rem; 
+    padding: 0.8rem 1.5rem;
     border-radius: 25px;
     font-weight: 600;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
 }
 
+/* o pseudo-elemento do ultimo elemento da lista nao vai ser exibido */
 nav ul li:last-child a::after {
     display: none;
 }
 
+/* quando o mouse passar por cima do ultimo elemento da lista, o ultimo elemento da lista vai ter o efeito neon */
 nav ul li:last-child a:hover {
     background: linear-gradient(45deg, var(--cor-gradiente-1), var(--cor-gradiente-2));
     color: var(--cor-branca);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
 } 
-
-
-
-
-
