@@ -1,0 +1,122 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Seção principal */
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+.left-block {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-block {
+    flex: 1;
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rodapé */
+footer {
+    background: #ddd;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-style: italic;
+}
+
+/* 1200px e a largura minima para um notebook */
+/* 768px e a largura minima para um tablet */
+/* 480px e a largura minima para um celular */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    header nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-block, .right-block {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .right-block {
+        order: 0;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .right-block {
+        position: static;
+    }
+
+}
+
+@media (max-width: 400px)
+
+
