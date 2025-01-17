@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="images/gengar.png">
+</head>
+
+<body>
+    <main>
+        <h1>IMAGENS</h1>
+
+        <ul>
+            <li class="card">
+                <p>Logo do Google</p>
+                <img class="google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google"">
+            </li>
+
+            <li class="card">
+                <p>Gengar</p>
+                <img class="gengar" src="images/gengar.png" alt="Gengar"">
+            </li>
+
+            <li class="card">
+                <p> Utilizar a tag picture</p>
+                
+                <picture class="picture">
+                    <source media="(max-width: 950px)" srcset="images/gengar.png">
+                    <source media="(max-width: 1250px)" srcset="images/gengar_mega.png">
+                    <img src="images/gengar_gigantamax.png" alt="Gengar Gigantamax">
+                </picture>
+            </li>
+        
+        </ul>
+
+    </main>
+</body>
+
+</html>
