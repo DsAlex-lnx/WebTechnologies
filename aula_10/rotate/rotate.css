@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.imagem-rotacao {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efeito hover opcional para pausar a animação */
+.imagem-rotacao:hover {
+    animation-play-state: paused;
+}

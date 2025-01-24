@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imagem-movimento {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    object-fit: cover;
+    animation: mover 10s linear infinite;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(-100%);
+    }
+    
+    100% {
+        transform: translateX(calc(100vw - 150px));
+    }
+}
+
+/* Efeito hover opcional para pausar a animação */
+.imagem-movimento:hover {
+    animation-play-state: paused;
+}

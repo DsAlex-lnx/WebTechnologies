@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.imagem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; é para que a imagem se ajuste ao container */
+    object-fit: cover;
+    border-radius: 10px;
+    /* ease-in-out é para que a animação seja suave */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imagem1 {
+    opacity: 1;
+}
+
+.imagem2 {
+    opacity: 0;
+}
+
+.container:hover .imagem1 {
+    opacity: 0;
+}
+
+.container:hover .imagem2 {
+    opacity: 1;
+}
