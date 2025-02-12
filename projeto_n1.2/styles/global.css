@@ -1,16 +1,22 @@
+/* Reset e variáveis globais */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* para que o padding e border sejam incluídos no cálculo da largura e altura do elemento */
     font-family: 'Segoe UI', sans-serif;
 }
 
+
+body {
+    height: 100vh;
+}
+
+/* O root é a raiz do documento, onde definimos as variáveis de cores */
 :root {
     --cor-neon: #8A2BE2;
     --cor-gradiente-1: #8A2BE2;
     --cor-gradiente-2: #4169E1;
     --cor-branca: #ffffff;
     --cor-texto: #2A2A2A;
-    --box-shadow: 0 2px 15px rgba(137, 43, 226, 0.3); 
-}
-
+    --box-shadow: 0 2px 15px rgba(138, 43, 226, 0.3);
+} 

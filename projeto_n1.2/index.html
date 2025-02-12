@@ -1,62 +1,69 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Site</title>
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
-
-    <body>
-        <header>
-            <div class="header-container">
-                <div class="logo-container">
-                      <img src="./assets/icon.png" alt="logo" class="logo">
-                      <div class="nome-empresa">AiLumina</div>  
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Criar Arte</a></li>
-                    </ul>
-                </nav>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta tag para definir o viewport do site. O viewport é a área visível da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Header Neon</title>
+    <!-- link para o arquivo de estilos css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- link para o ícone do site -->
+    <link rel="icon" href="./assets/icon.png">
+</head>
+<body>
+    <!-- montando o header -->
+    <header>
+        <!-- logo e nome da empresa -->
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="./assets/icon.png" alt="Logo NeonTech" class="logo">
+                <div class="company-name">AiLumina</div>
             </div>
-        </header>
+            <!-- menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Criar Arte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        
-        <main>
-            <section>
-                <div>
-                    <h1>Ilumine suas ideias com IA</h1>
-                    <p>
-                        Transforme seus momentos em obras de arte únicas com o AiLumina. 
-                        Nossa tecnologia de inteligência artificial permite que você capture 
-                        e gere imagens extraordinárias com efeitos visuais deslumbrantes.
-                    </p>
-                    <button>Explorar Galeria</button>
-                </div>
-            </section>
-    
-            <aside>
-                <div>
-                    <img>
-                    <img>
-                    <img>
-                    <img>
-                </div>
-            </aside>
-        </main>
-    
-    
-        <footer>
-            <div>
-                <div>
-                    <p>Desenvolvido por: </p>
-                    <p>Professor Alex Alves</p>
-                </div>
+    <main class="main-container">
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1 class="hero-title">Ilumine suas ideias com IA</h1>
+                <p class="hero-description">
+                    Transforme seus momentos em obras de arte únicas com o AiLumina. 
+                    Nossa tecnologia de inteligência artificial permite que você capture 
+                    e gere imagens extraordinárias com efeitos visuais deslumbrantes.
+                </p>
+                <button class="cta-button">Explorar Galeria</button>
             </div>
-        </footer>
+        </section>
 
-    </body>
+        <aside class="gallery-preview">
+            <div class="gallery-grid">
+                <img src="./assets/gallery_image1.jpg" alt="Arte gerada por IA" class="gallery-image">
+                <img src="./assets/gallery_image2.jpg" alt="Arte gerada por IA" class="gallery-image">
+                <img src="./assets/gallery_image3.jpg" alt="Arte gerada por IA" class="gallery-image">
+                <img src="./assets/gallery_image4.jpg" alt="Arte gerada por IA" class="gallery-image">
+            </div>
+        </aside>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-text">Desenvolvido por: </p>
+                <p class="footer-author">Professor Alex Alves</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>

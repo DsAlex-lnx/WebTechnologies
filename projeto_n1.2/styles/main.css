@@ -1,2 +1,9 @@
+/* Importação de arquivos CSS */
 @import url('./global.css');
 @import url('./components/header.css');
+@import url('./components/main-content.css');
+@import url('./components/footer.css');
+
+/* Aqui você pode adicionar outros imports conforme necessário */
+/* @import url('./components/footer.css'); */
+/* etc... */ 

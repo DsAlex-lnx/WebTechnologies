@@ -1,0 +1,115 @@
+.main-container {
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 100px);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--cor-gradiente-1), var(--cor-gradiente-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: var(--cor-neon);
+    color: var(--cor-branca);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, var(--cor-gradiente-1), var(--cor-gradiente-2));
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+    transform: translateY(-2px);
+}
+
+.gallery-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(129, 13, 237, 0.5);
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .hero-section,
+    .gallery-preview {
+        min-height: 50vh;
+    }
+    
+    .gallery-preview {
+        padding: 2rem 1rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
